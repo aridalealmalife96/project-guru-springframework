@@ -6,10 +6,12 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class SetterInjectedController {
-    @Autowired
+
+
     private GreetingService greetingService;
 
     //Costruttore
+    @Autowired
     public void SetteriInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }

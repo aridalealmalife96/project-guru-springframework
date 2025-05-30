@@ -4,10 +4,15 @@ import guru.springframework.spring6di.services.GreetingService;
 import guru.springframework.spring6di.services.GreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import javax.sound.midi.Soundbank;
+
+@SpringBootTest
 class SetterInjectedControllerTest {
 
+    @Autowired
     SetterInjectedController setterInjectedController;
 
     @BeforeEach
@@ -19,5 +24,6 @@ class SetterInjectedControllerTest {
 
     @Test
     void sayHello() {
+        System.out.println("Setter Injected TEST:\n" + setterInjectedController.sayHello());
     }
 }
